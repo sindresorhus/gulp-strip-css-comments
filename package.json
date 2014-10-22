@@ -1,0 +1,43 @@
+{
+  "name": "gulp-strip-css-comments",
+  "version": "0.0.0",
+  "description": "Strip comments from CSS",
+  "license": "MIT",
+  "repository": "sindresorhus/gulp-strip-css-comments",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "css",
+    "style",
+    "stylesheet",
+    "strip",
+    "remove",
+    "delete",
+    "trim",
+    "comments",
+    "preprocess",
+    "transform",
+    "string"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.0",
+    "strip-css-comments": "^1.0.0",
+    "through2": "^0.6.1"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
