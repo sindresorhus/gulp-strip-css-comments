@@ -5,7 +5,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save-dev gulp-strip-css-comments
 ```
 
@@ -22,6 +22,13 @@ gulp.task('default', function () {
 		.pipe(gulp.dest('dist'));
 });
 ```
+
+
+## stripCssComments([options])
+
+### options
+
+See the `strip-css-comments` [options](https://github.com/sindresorhus/strip-css-comments#options).
 
 
 ## License

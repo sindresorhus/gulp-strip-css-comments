@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 var through = require('through2');
 var stripCssComments = require('strip-css-comments');
 
-module.exports = function () {
+module.exports = function (opts) {
 	return through.obj(function (file, enc, cb) {
 		if (file.isNull()) {
 			cb(null, file);
@@ -15,7 +15,7 @@ module.exports = function () {
 		}
 
 		try {
-			file.contents = new Buffer(stripCssComments(file.contents.toString()));
+			file.contents = new Buffer(stripCssComments(file.contents.toString(), opts));
 			this.push(file);
 		} catch (err) {
 			this.emit('error', new gutil.PluginError('gulp-strip-css-comments', err, {fileName: file.path}));
