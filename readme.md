@@ -13,14 +13,14 @@ $ npm install --save-dev gulp-strip-css-comments
 ## Usage
 
 ```js
-var gulp = require('gulp');
-var stripCssComments = require('gulp-strip-css-comments');
+const gulp = require('gulp');
+const stripCssComments = require('gulp-strip-css-comments');
 
-gulp.task('default', function () {
-	return gulp.src('src/app.css')
+gulp.task('default', () =>
+	gulp.src('src/app.css')
 		.pipe(stripCssComments())
-		.pipe(gulp.dest('dist'));
-});
+		.pipe(gulp.dest('dist'))
+);
 ```
 
 
@@ -33,4 +33,4 @@ See the `strip-css-comments` [options](https://github.com/sindresorhus/strip-css
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

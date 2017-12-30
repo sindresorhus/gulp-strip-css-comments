@@ -1,43 +1,45 @@
 {
-  "name": "gulp-strip-css-comments",
-  "version": "1.2.0",
-  "description": "Strip comments from CSS",
-  "license": "MIT",
-  "repository": "sindresorhus/gulp-strip-css-comments",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "node test.js"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "gulpplugin",
-    "css",
-    "style",
-    "stylesheet",
-    "strip",
-    "remove",
-    "delete",
-    "trim",
-    "comments",
-    "preprocess",
-    "transform",
-    "string"
-  ],
-  "dependencies": {
-    "gulp-util": "^3.0.0",
-    "strip-css-comments": "^3.0.0",
-    "through2": "^2.0.0"
-  },
-  "devDependencies": {
-    "ava": "0.0.4"
-  }
+	"name": "gulp-strip-css-comments",
+	"version": "1.2.0",
+	"description": "Strip comments from CSS",
+	"license": "MIT",
+	"repository": "sindresorhus/gulp-strip-css-comments",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"gulpplugin",
+		"css",
+		"style",
+		"stylesheet",
+		"strip",
+		"remove",
+		"delete",
+		"trim",
+		"comments",
+		"preprocess",
+		"transform",
+		"string"
+	],
+	"dependencies": {
+		"plugin-error": "^0.1.2",
+		"strip-css-comments": "^3.0.0",
+		"through2": "^2.0.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"vinyl": "^2.1.0",
+		"xo": "^0.18.2"
+	}
 }

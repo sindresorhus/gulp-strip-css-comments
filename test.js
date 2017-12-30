@@ -1,18 +1,16 @@
-'use strict';
-var test = require('ava');
-var gutil = require('gulp-util');
-var stripCssComments = require('./');
+import test from 'ava';
+import Vinyl from 'vinyl';
+import m from '.';
 
-test(function (t) {
-	var stream = stripCssComments();
+test.cb(t => {
+	const stream = m();
 
-	stream.once('data', function (file) {
-		t.assert(file.contents.toString() === 'body{}');
+	stream.once('data', file => {
+		t.is(file.contents.toString(), 'body{}');
+		t.end();
 	});
 
-	stream.on('end', t.end);
-
-	stream.write(new gutil.File({
-		contents: new Buffer('body{/**/}')
+	stream.end(new Vinyl({
+		contents: Buffer.from('body{/**/}')
 	}));
 });
