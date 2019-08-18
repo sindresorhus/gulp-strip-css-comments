@@ -4,13 +4,16 @@
 	"description": "Strip comments from CSS",
 	"license": "MIT",
 	"repository": "sindresorhus/gulp-strip-css-comments",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=4"
+		"node": ">=18"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -33,13 +36,21 @@
 		"string"
 	],
 	"dependencies": {
-		"plugin-error": "^0.1.2",
-		"strip-css-comments": "^3.0.0",
-		"through2": "^2.0.0"
+		"gulp-plugin-extras": "^0.2.2",
+		"strip-css-comments": "^5.0.0"
 	},
 	"devDependencies": {
-		"ava": "*",
-		"vinyl": "^2.1.0",
-		"xo": "^0.18.2"
+		"ava": "^5.3.1",
+		"p-event": "^6.0.0",
+		"vinyl": "^3.0.0",
+		"xo": "^0.56.0"
+	},
+	"peerDependencies": {
+		"gulp": ">=4"
+	},
+	"peerDependenciesMeta": {
+		"gulp": {
+			"optional": true
+		}
 	}
 }
