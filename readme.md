@@ -16,7 +16,7 @@ $ npm install --save-dev gulp-strip-css-comments
 const gulp = require('gulp');
 const stripCssComments = require('gulp-strip-css-comments');
 
-gulp.task('default', () =>
+exports.default = () => (
 	gulp.src('src/app.css')
 		.pipe(stripCssComments())
 		.pipe(gulp.dest('dist'))
@@ -24,13 +24,10 @@ gulp.task('default', () =>
 ```
 
 
-## stripCssComments([options])
+## stripCssComments(options?)
 
 ### options
 
+Type: `object`
+
 See the `strip-css-comments` [options](https://github.com/sindresorhus/strip-css-comments#options).
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

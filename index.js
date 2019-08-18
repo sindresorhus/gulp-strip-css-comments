@@ -4,23 +4,23 @@ const stripCssComments = require('strip-css-comments');
 const PluginError = require('plugin-error');
 
 module.exports = options => {
-	return through.obj(function (file, enc, cb) {
+	return through.obj(function (file, encoding, callback) {
 		if (file.isNull()) {
-			cb(null, file);
+			callback(null, file);
 		}
 
 		if (file.isStream()) {
-			cb(new PluginError('gulp-strip-css-comments', 'Streaming not supported'));
+			callback(new PluginError('gulp-strip-css-comments', 'Streaming not supported'));
 			return;
 		}
 
 		try {
 			file.contents = Buffer.from(stripCssComments(file.contents.toString(), options));
 			this.push(file);
-		} catch (err) {
-			this.emit('error', new PluginError('gulp-strip-css-comments', err, {fileName: file.path}));
+		} catch (error) {
+			this.emit('error', new PluginError('gulp-strip-css-comments', error, {fileName: file.path}));
 		}
 
-		cb();
+		callback();
 	});
 };
