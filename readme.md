@@ -1,4 +1,4 @@
-# gulp-strip-css-comments [![Build Status](https://travis-ci.org/sindresorhus/gulp-strip-css-comments.svg?branch=master)](https://travis-ci.org/sindresorhus/gulp-strip-css-comments)
+# gulp-strip-css-comments
 
 > Strip comments from CSS using [`strip-css-comments`](https://github.com/sindresorhus/strip-css-comments)
 
